@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import folder from '/tracom_services_cover.jpg';
+import folder from '../../Assets/tracom_services_cover.jpg';
 import himg from '../../Assets/html.png';
 import Ricon from '../../Assets/react.svg';
 import Picon from '../../Assets/payment.png';
