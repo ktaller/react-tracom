@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+    line-height: 1.6;
+    margin-top: 4px;
+    background-color: #c4dbf1;
+    /* background-image: url("./Assets/particles.webp"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

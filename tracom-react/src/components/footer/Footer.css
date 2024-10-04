@@ -1,0 +1,41 @@
+footer {
+  /* background-color: #9e9595; */
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  text-align: center;
+  line-height: 1.6;
+}
+.footer-container p {
+    /* background-color: #0056b3; */
+    font-size: large;
+}
+.social-links a {
+  color: #0056b3;
+  text-decoration: none;
+  font-size: large;
+  margin: 0 0;
+}
+
+footer .newsletter input {
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+footer .newsletter button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+footer .newsletter button:hover {
+  background-color: #0056b3;
+}
+.rights{
+    font-style: italic;
+}

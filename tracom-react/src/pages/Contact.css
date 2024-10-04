@@ -1,0 +1,28 @@
+.c_form {
+    background-color: rgb(107, 105, 114);
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    border-radius: 30px;
+    padding-top: 0px;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  .c_form h3 {
+    padding: 6%;
+    font-size: larger;
+    font-style: italic;
+  }
+  .place-h {
+    font-weight: 500;
+  }
+  .submit {
+    background-color: rgb(182, 182, 207);
+    padding: 02px;
+    border-radius: 10px;
+    /* justify-content: end; */
+    align-items: end;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
