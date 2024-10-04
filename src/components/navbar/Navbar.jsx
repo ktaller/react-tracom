@@ -15,7 +15,7 @@ function Navbar() {
           />
           <ul id="main-nav-ul">
             <li>
-              <Link to={"/home"}>Home</Link>
+              <Link to={"/"}>Home</Link>
             </li>
             <li>
               <Link to={'/about'}>About</Link>
