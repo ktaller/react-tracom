@@ -23,11 +23,11 @@ function Navbar() {
             <li>
               <Link to = {'/contact'}>Contact</Link>
             </li>
-             <li>
+            <li>
               <Link to = {'/login'}>
-               Login</Link>
+              <button className="her-button"> Login</button></Link>
             </li> 
-           {/* <li>
+            {/* <li>
               <Link to = {'/registration'}>
               <button > Register</button></Link>
             </li>  */}
