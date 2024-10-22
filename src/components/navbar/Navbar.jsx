@@ -20,15 +20,17 @@ function Navbar() {
             <li>
               <Link to={'/about'}>About</Link>
             </li>
-            {/* <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#">Team</a>
-            </li> */}
             <li>
               <Link to = {'/contact'}>Contact</Link>
             </li>
+             <li>
+              <Link to = {'/login'}>
+               Login</Link>
+            </li> 
+           {/* <li>
+              <Link to = {'/registration'}>
+              <button > Register</button></Link>
+            </li>  */}
           </ul>
         </nav>
       </header>

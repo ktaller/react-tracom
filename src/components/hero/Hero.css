@@ -50,9 +50,9 @@
   .about p {
     max-width: 900px;
     margin: 0 auto 20px;
-    font-weight: bolder;
+    font-weight: lighter;
     font-size: larger;
-    /* background-color: black; */
+    font-style: oblique;
     border-radius: 20px;
   }
   
