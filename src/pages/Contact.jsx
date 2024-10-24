@@ -2,8 +2,8 @@ import React from "react";
 import "./Contact.css"
 function Contact() {
   return (
-    <section class="c_form">
-      <div class="form_container">
+    <section className="c_form">
+      <div className="form_container">
         <h3>Your details here..</h3>
         <form id="contactForm" action="#">
           <label for="f_name" class="place-h">
@@ -63,7 +63,7 @@ function Contact() {
           ></textarea>
           <br />
 
-          <button type="submit-button" class="submit" onclick="myFunction()">
+          <button type="submit-button" class="submit" onClick="myFunction()">
             Submit
           </button>
           <h2>Contact us,</h2>

@@ -27,10 +27,10 @@ function Navbar() {
               <Link to = {'/login'}>
               <button className="her-button"> Login</button></Link>
             </li> 
-            {/* <li>
+            <li>
               <Link to = {'/registration'}>
-              <button > Register</button></Link>
-            </li>  */}
+              <button className="her-button"> Register</button></Link>
+            </li> 
           </ul>
         </nav>
       </header>

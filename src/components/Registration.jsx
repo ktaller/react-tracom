@@ -1,37 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-// const Registration = ({ setIsRegistered }) => {
-//   const [username, setUsername] = useState("");
-//   const [password, setPassword] = useState("");
-
- 
-  const Registration = ({setIsRegistered}) =>{
-    const[registrationDetails, setRegistrationDetails] = useState({
-      username:"",
-      password:""
-    })
-   const [erra, setErra] = useState({
-    username:"",
+const Registration = ({ setIsRegistered }) => {
+  const [registrationDetails, setRegistrationDetails] = useState({
+    username: "",
     password: ""
-
   });
- 
+  const [erra, setErra] = useState({
+    username: "",
+    password: ""
+  });
 
   const handleSubmit = (e) => {
-    const {username, password, erra} = registrationDetails
     e.preventDefault();
+    const { username, password } = registrationDetails;
 
-    // Validate passwordnpm
+    // Password validation
     if (password.length < 8) {
-            setErra({...erra, password:"tnjymjy,,u<8"})
-          return;
+      setErra({ ...erra, password: "Password must be at least 8 characters." });
+      return;
     } else if (!/[A-Z]/.test(password)) {
-      setErra("Password must contain at least one uppercase letter.");
+      setErra({ ...erra, password: "Password must contain at least one uppercase letter." });
       return;
     } else if (!/\d/.test(password)) {
-      setErra("Password must contain at least one digit.");
+      setErra({ ...erra, password: "Password must contain at least one digit." });
       return;
+    } else {
+      setErra({ ...erra, password: "" }); // Clear password error if valid
     }
 
     // Save username and password to localStorage
@@ -39,51 +34,55 @@ import { Link } from "react-router-dom";
     localStorage.setItem("password", password);
     alert("Registration successful! You can now log in.");
     setIsRegistered(true);
-    setErra("");
+
+    // Reset form fields
+    setRegistrationDetails({
+      username: "",
+      password: ""
+    });
   };
 
   return (
-    <div className="registration-container">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setRegistrationDetails({... registrationDetails, username:e.target.value})}
-            required
-          />
-        </div>
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+      <div className="registration-container border rounded p-4 shadow bg-white" style={{ width: '400px' }}>
+        <h2 className="text-center mb-4">Register</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group mb-3">
+            <label htmlFor="username" className="form-label">Username:</label>
+            <input
+              type="text"
+              id="username"
+              value={registrationDetails.username}
+              onChange={(e) => setRegistrationDetails({ ...registrationDetails, username: e.target.value })}
+              required
+              className="form-control"
+            />
+            {erra.username && <p className="text-danger mt-2">{erra.username}</p>}
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
+          <div className="form-group mb-3">
+            <label htmlFor="password" className="form-label">Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={registrationDetails.password}
+              onChange={(e) => setRegistrationDetails({ ...registrationDetails, password: e.target.value })}
+              required
+              className="form-control"
+            />
+            {erra.password && <p className="text-danger mt-2">{erra.password}</p>}
+          </div>
 
-        {error && <p style={{ color: "red" }}>{error}</p>}
-
-        <button type="submit" className="btn">
-          Register
-        </button>
-        <p>
-          Already have an account?
-          <Link to = "/login" >click here </Link>
-          to log in.
-        </p>
-      </form>
+          <button type="submit" className="btn btn-primary w-100 mb-3">
+            Register
+          </button>
+          <p className="text-center">
+            Already have an account? <Link to="/login" className="text-decoration-none">Click here</Link> to log in.
+          </p>
+        </form>
+      </div>
     </div>
   );
-
-}
-
-
+};
 
 export default Registration;
